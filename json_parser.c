@@ -78,7 +78,7 @@ token_list_t* tokenize_string(char* text){
                     sprintf(ptr,"%d",a);
                 }
                 else {
-                    sscanf(text,"%[a-zA-Z-]s%*s",ptr);
+                    sscanf(text,"%[a-zA-Z -]s%*s",ptr);
                     teta=malloc(sizeof(Token));
                     teta->type=TEXT;
                     teta->str=strdup(ptr);
